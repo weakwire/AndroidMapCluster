@@ -3,3 +3,10 @@
 bin/
 gen/
 .settings/
+out/
+.classpath/
+.project/
+*.iml
+lint.xml
+*.txt
+*.properties

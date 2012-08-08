@@ -19,7 +19,6 @@ public class AndroidMapClusteringActivity extends MapActivity {
         mapView.setPoints(generateDummyPoints()).setMaxPoints(20);
     }
 
-
     private List<GeoPoint> generateDummyPoints() {
         List<GeoPoint> geoPoints = new ArrayList<GeoPoint>();
         for (int i = -130; i < 130; i += 40) {
