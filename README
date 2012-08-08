@@ -6,5 +6,5 @@ Usage:
 	  mapView.setPoints(geoPoints).setMaxPoints(20);
 
 Algorithms :
-	* DVM Fast Satiol Clustering by Tom Gibara http://www.tomgibara.com/clustering/fast-spatial/
+	* GVM Fast Satiol Clustering by Tom Gibara http://www.tomgibara.com/clustering/fast-spatial/
 	  Other clustering methods soon to be added
