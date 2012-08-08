@@ -1,0 +1,5 @@
+.idea
+.metadata
+bin/
+gen/
+.settings/
