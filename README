@@ -1,0 +1,10 @@
+A project that demonstrates point clustering in android mapviews using different clustering algorithms
+
+Usage:
+	  List<GeoPoint> geoPoints = new ArrayList<GeoPoint>();
+		//fill the list..
+	  **mapView.setPoints(geoPoints).setMaxPoints(20);**
+
+Algorithms :
+	* DVM Fast Satiol Clustering by Tom Gibara http://www.tomgibara.com/clustering/fast-spatial/
+	  Other clustering methods soon to be added
