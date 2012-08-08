@@ -1,4 +1,4 @@
-package com.weakwire.pointclusterer;
+package com.weakwire.mapviewcluster;
 
 import android.util.Log;
 import com.google.android.maps.GeoPoint;
@@ -16,34 +16,39 @@ import java.util.List;
  * Time: 3:30 PM
  * To change this template use File | Settings | File Templates.
  */
-public class DummyClusterer {
-    private static final String TAG = "DummyClusterer";
+public class DVMClusterer {
+    private static final String TAG = "DVMClusterer";
 
     public static List<ClusteredGeoPoint> getClusteredPoints(List<GeoPoint> geoPoints, int maxClusters) {
-
-        Log.d(TAG, "Started clustering Clustering");
 
         int[] xs = new int[2];
         IntClusters<GeoPoint> clusters = new IntClusters<GeoPoint>(2, maxClusters);
 
         //This is too slow!
         for (GeoPoint point : geoPoints) {
-            xs[0] = point.getLongitudeE6() ;
-            xs[1] = point.getLatitudeE6() ;
+            xs[0] = point.getLongitudeE6();
+            xs[1] = point.getLatitudeE6();
             clusters.add(1, xs, point);
         }
+
         List<ClusteredGeoPoint> clusteredPoints = new ArrayList<ClusteredGeoPoint>();
 
         List<IntResult<GeoPoint>> results = clusters.results();
         for (IntResult<GeoPoint> clusteredPoint : results) {
 
-            Log.i(TAG, "lng= " + clusteredPoint.getCoords()[0] + " lat= " + clusteredPoint.getCoords()[1] + " weight= " + clusteredPoint.getMass());
+            Log.i(TAG, "lng= "
+                    + clusteredPoint.getCoords()[0] + " lat= "
+                    + clusteredPoint.getCoords()[1]
+                    + " weight= "
+                    + clusteredPoint.getMass()
+                    + "variance = " + clusteredPoint.getKey().getLongitudeE6());
 
             clusteredPoints.add(
                     new ClusteredGeoPoint(
                             clusteredPoint.getCoords()[1],
                             clusteredPoint.getCoords()[0],
-                            clusteredPoint.getMass())
+                            clusteredPoint.getMass(),
+                            clusteredPoint.getKey())
             );
 
         }
