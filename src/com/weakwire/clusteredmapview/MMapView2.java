@@ -15,7 +15,7 @@ import com.google.android.maps.MapView;
 import com.google.android.maps.Overlay;
 import com.weakwire.mapclustering.R;
 
-public class MMapView extends MapView {
+public class MMapView2 extends MapView {
 
 	private List<Overlay> mapOverlays;
 	private Drawable drawable;
@@ -28,13 +28,13 @@ public class MMapView extends MapView {
 	private int oldZoomLevel = -1;
 	private Context context;
 
-	public MMapView(final Context context, String apiKey) {
+	public MMapView2(final Context context, String apiKey) {
 		super(context, apiKey);
 		this.context = context;
 		_init();
 	}
 
-	public MMapView(Context context, AttributeSet attrs) {
+	public MMapView2(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		this.context = context;
 		_init();

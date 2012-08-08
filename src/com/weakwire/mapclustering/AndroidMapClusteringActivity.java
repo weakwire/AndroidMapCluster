@@ -3,15 +3,15 @@ package com.weakwire.mapclustering;
 import android.os.Bundle;
 
 import com.google.android.maps.MapActivity;
-import com.weakwire.clusteredmapview.MMapView;
+import com.weakwire.clusteredmapview.MMapView2;
 
 public class AndroidMapClusteringActivity extends MapActivity {
-	public static MMapView mapView;
+	public static MMapView2 mapView;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		mapView = new MMapView(this, "0C7QSs4CCB5WjrVf0RdQOWW1WYsyC3eAKdTtWSw");
+		mapView = new MMapView2(this, "0C7QSs4CCB5WjrVf0RdQOWW1WYsyC3eAKdTtWSw");
 		setContentView(mapView);
 		// mapView.putPoint(21, 22, false);
 		// mapView.putPoint(22, 22, false);
