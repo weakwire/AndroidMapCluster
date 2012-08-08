@@ -1,9 +1,9 @@
-package com.weakwire.clusteredmapview;
-
-import java.util.Stack;
+package com.weakwire.clusteredmapviewOLD;
 
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.OverlayItem;
+
+import java.util.Stack;
 
 public class OverlayItemExtended extends OverlayItem {
 	/**

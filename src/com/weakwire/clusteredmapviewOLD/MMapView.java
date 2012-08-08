@@ -1,19 +1,17 @@
-package com.weakwire.clusteredmapview;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.weakwire.clusteredmapviewOLD;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
-
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapView;
 import com.google.android.maps.Overlay;
 import com.weakwire.mapclustering.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MMapView extends MapView {
 
@@ -123,9 +121,9 @@ public class MMapView extends MapView {
 		super.dispatchDraw(canvas);
 		if (getZoomLevel() != oldZoomLevel) {
 			if (getZoomLevel() < 14) {
-				// itemizedOverlay = new MMapViewOverlay(drawableMe, context);
+				// itemizedOverlay = new CMapViewOverlay(drawableMe, context);
 			} else {
-				// itemizedOverlay = new MMapViewOverlay(drawable, context);
+				// itemizedOverlay = new CMapViewOverlay(drawable, context);
 			}
 			oldZoomLevel = getZoomLevel();
 		}

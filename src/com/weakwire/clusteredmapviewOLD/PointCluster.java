@@ -1,13 +1,12 @@
-package com.weakwire.clusteredmapview;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.weakwire.clusteredmapviewOLD;
 
 import android.graphics.Point;
 import android.graphics.Rect;
-
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PointCluster {
     public final static int MAX_VISIBLE_POINTS = 4;

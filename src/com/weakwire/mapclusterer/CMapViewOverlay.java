@@ -1,20 +1,21 @@
-package com.weakwire.clusteredmapview;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.weakwire.mapclusterer;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
-
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.MapView;
+import com.weakwire.clusteredmapviewOLD.OverlayItemExtended;
+import com.weakwire.clusteredmapviewOLD.PointCluster;
 import com.weakwire.mapclustering.AndroidMapClusteringActivity;
 
-public class MMapViewOverlay extends ItemizedOverlay<OverlayItemExtended> {
+import java.util.ArrayList;
+import java.util.List;
+
+public class CMapViewOverlay extends ItemizedOverlay<OverlayItemExtended> {
 	/**
 	 */
 	private List<OverlayItemExtended> mOverlays = new ArrayList<OverlayItemExtended>();
@@ -22,7 +23,7 @@ public class MMapViewOverlay extends ItemizedOverlay<OverlayItemExtended> {
 	/**
 	 */
 
-	public MMapViewOverlay(Drawable defaultMarker, Context context) {
+	public CMapViewOverlay(Drawable defaultMarker, Context context) {
 		super((defaultMarker));
 		_init();
 	}
